@@ -1,0 +1,118 @@
+[2023-08-25 05:44:09,744] [WARNING] [accelerator.py:117:infer_accelerators_from_execution_provider] Execution provider CPUExecutionProvider is mapped to multiple accelerators ['cpu', 'gpu']. Olive cannot infer the device which may cause unexpected behaviorPlease specify the accelerator in the accelerator configs
+[2023-08-25 05:44:09,744] [WARNING] [accelerator.py:117:infer_accelerators_from_execution_provider] Execution provider CPUExecutionProvider is mapped to multiple accelerators ['cpu', 'gpu', 'npu']. Olive cannot infer the device which may cause unexpected behaviorPlease specify the accelerator in the accelerator configs
+[2023-08-25 05:44:09,744] [WARNING] [engine.py:104:__init__] Cannot infer the accelerators from the target system. Use CPU as default.
+[2023-08-25 05:44:15,265] [INFO] [engine.py:342:run] Input model evaluation results: {'accuracy-accuracy_custom': 0.11895161122083664, 'latency-avg': 26.03642}
+[2023-08-25 05:44:15,265] [INFO] [engine.py:347:run] Saved evaluation results of input model to models/resnet_ptq_cpu/cpu-cpu_input_model_metrics.json
+[2023-08-25 05:44:15,267] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+============= Diagnostic Run torch.onnx.export version 2.0.1+cu117 =============
+verbose: False, log level: Level.ERROR
+======================= 0 NONE 0 NOTE 0 WARNING 0 ERROR ========================
+
+[2023-08-25 05:44:16,691] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+[2023-08-25 05:44:16,693] [INFO] [quantization.py:333:_run_for_config] Preprocessing model for quantization
+[2023-08-25 05:44:20,820] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+[2023-08-25 05:44:24,540] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:44:35,042] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:44:55,725] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 1, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': 1, 'intra_op_num_threads': 4}__io_bind_False", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 1, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': 1, 'intra_op_num_threads': 4}, 'io_bind': False, 'latency_ms': 54.50611}
+[2023-08-25 05:45:03,913] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+[2023-08-25 05:45:03,915] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+[2023-08-25 05:45:03,917] [INFO] [quantization.py:336:_run_for_config] Already processed model for quantization, skipping preprocessing
+[2023-08-25 05:45:06,503] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+[2023-08-25 05:45:09,776] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:45:20,247] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:45:41,087] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}__io_bind_False", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}, 'io_bind': False, 'latency_ms': 54.85018}
+[2023-08-25 05:45:49,404] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+[2023-08-25 05:45:49,406] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+[2023-08-25 05:45:49,409] [INFO] [quantization.py:336:_run_for_config] Already processed model for quantization, skipping preprocessing
+[2023-08-25 05:45:51,981] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+[2023-08-25 05:45:54,950] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:46:05,426] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:46:25,954] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 1, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': 1, 'intra_op_num_threads': 4}__io_bind_False", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 1, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': 1, 'intra_op_num_threads': 4}, 'io_bind': False, 'latency_ms': 54.65885}
+[2023-08-25 05:46:34,153] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+[2023-08-25 05:46:34,155] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+[2023-08-25 05:46:34,158] [INFO] [quantization.py:336:_run_for_config] Already processed model for quantization, skipping preprocessing
+[2023-08-25 05:46:36,733] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+[2023-08-25 05:46:39,702] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:46:50,203] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:47:11,051] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}__io_bind_False", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}, 'io_bind': False, 'latency_ms': 54.81863}
+[2023-08-25 05:47:19,249] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+[2023-08-25 05:47:19,252] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+[2023-08-25 05:47:19,254] [INFO] [quantization.py:336:_run_for_config] Already processed model for quantization, skipping preprocessing
+/home/tzhenghao/olive-exercises/.venv/lib/python3.10/site-packages/onnxruntime/quantization/onnx_quantizer.py:683: RuntimeWarning: invalid value encountered in cast
+  quantized_data = (np.asarray(bias_data) / bias_scale).round().astype(np.int32)
+  [2023-08-25 05:47:32,568] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+  [2023-08-25 05:47:33,991] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+  [2023-08-25 05:47:38,664] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+  [2023-08-25 05:47:47,633] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 1, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': 1, 'intra_op_num_threads': 4}__io_bind_False", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 1, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': 1, 'intra_op_num_threads': 4}, 'io_bind': False, 'latency_ms': 5.11143}
+  [2023-08-25 05:47:51,299] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+  [2023-08-25 05:47:51,302] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+  [2023-08-25 05:47:51,304] [INFO] [quantization.py:336:_run_for_config] Already processed model for quantization, skipping preprocessing
+  [2023-08-25 05:48:04,580] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+  [2023-08-25 05:48:06,048] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+  [2023-08-25 05:48:10,694] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+  [2023-08-25 05:48:19,642] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "_io_bind_False_execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 1, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': 1, 'intra_op_num_threads': None}", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 1, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': 1, 'intra_op_num_threads': None}, 'io_bind': False, 'latency_ms': 5.16435}
+  [2023-08-25 05:48:23,210] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+  [2023-08-25 05:48:23,213] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+  [2023-08-25 05:48:23,215] [INFO] [quantization.py:336:_run_for_config] Already processed model for quantization, skipping preprocessing
+  [2023-08-25 05:48:32,688] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+  [2023-08-25 05:48:34,423] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+  [2023-08-25 05:48:39,666] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+  [2023-08-25 05:48:50,152] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}__io_bind_False", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}, 'io_bind': False, 'latency_ms': 14.81987}
+  [2023-08-25 05:48:54,746] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+  [2023-08-25 05:48:54,749] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+  [2023-08-25 05:48:54,751] [INFO] [quantization.py:336:_run_for_config] Already processed model for quantization, skipping preprocessing
+  [2023-08-25 05:49:04,292] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+  [2023-08-25 05:49:06,052] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+  [2023-08-25 05:49:11,253] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+  [2023-08-25 05:49:21,789] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}__io_bind_False", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}, 'io_bind': False, 'latency_ms': 14.65613}
+
+Collecting tensor data and making histogram ...
+Finding optimal threshold for each tensor using percentile algorithm ...
+Number of tensors : 125
+Number of histogram bins : 2048
+Percentile : (0.0010000000000047748,99.999)
+[2023-08-25 05:59:07,203] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+[2023-08-25 05:59:08,456] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:59:12,609] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:59:20,568] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': 'pretuning', 'latency_ms': 5.14898}
+[2023-08-25 05:59:23,807] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+[2023-08-25 05:59:23,810] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+[2023-08-25 05:59:23,812] [INFO] [quantization.py:336:_run_for_config] Already processed model for quantization, skipping preprocessing
+Collecting tensor data and making histogram ...
+Finding optimal threshold for each tensor using percentile algorithm ...
+Number of tensors : 125
+Number of histogram bins : 2048
+Percentile : (0.0010000000000047748,99.999)
+[2023-08-25 05:59:40,960] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+[2023-08-25 05:59:42,221] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:59:46,369] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 05:59:54,319] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "_io_bind_False_execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 1, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': 1, 'intra_op_num_threads': None}", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 1, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': 1, 'intra_op_num_threads': None}, 'io_bind': False, 'latency_ms': 5.10248}
+[2023-08-25 05:59:57,519] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+[2023-08-25 05:59:57,522] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+[2023-08-25 05:59:57,524] [INFO] [quantization.py:336:_run_for_config] Already processed model for quantization, skipping preprocessing
+Collecting tensor data and making histogram ...
+Finding optimal threshold for each tensor using percentile algorithm ...
+Number of tensors : 125
+Number of histogram bins : 2048
+Percentile : (0.0010000000000047748,99.999)
+[2023-08-25 06:00:13,483] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+[2023-08-25 06:00:15,056] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 06:00:19,834] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 06:00:29,329] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}__io_bind_False", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}, 'io_bind': False, 'latency_ms': 15.26056}
+[2023-08-25 06:00:33,598] [INFO] [engine.py:939:_run_pass] Running pass OnnxConversion
+[2023-08-25 06:00:33,601] [INFO] [engine.py:939:_run_pass] Running pass OnnxQuantization
+[2023-08-25 06:00:33,603] [INFO] [quantization.py:336:_run_for_config] Already processed model for quantization, skipping preprocessing
+Collecting tensor data and making histogram ...
+Finding optimal threshold for each tensor using percentile algorithm ...
+Number of tensors : 125
+Number of histogram bins : 2048
+Percentile : (0.0010000000000047748,99.999)
+[2023-08-25 06:00:49,529] [INFO] [engine.py:939:_run_pass] Running pass OrtPerfTuning
+[2023-08-25 06:00:51,104] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 0), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 06:00:55,854] [INFO] [perf_tuning.py:89:tune_onnx_model] Run tuning for: [('provider', 'CPUExecutionProvider'), ('execution_mode', 1), ('ort_opt_level', 99), ('io_bind', False)]
+[2023-08-25 06:01:05,391] [INFO] [perf_tuning.py:98:tune_onnx_model] Best result: {'test_name': "execution_provider_[('CPUExecutionProvider', {})]_session_options_{'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}__io_bind_False", 'execution_provider': [('CPUExecutionProvider', {})], 'session_options': {'execution_mode': 0, 'graph_optimization_level': 99, 'extra_session_config': None, 'inter_op_num_threads': None, 'intra_op_num_threads': 4}, 'io_bind': False, 'latency_ms': 15.2302}
+[2023-08-25 06:01:09,571] [INFO] [footprint.py:166:get_pareto_frontier] pareto frontier points: 26_OrtPerfTuning-25-905b1c6d27e3251edfcea7e072fd7bff-cpu-cpu {'accuracy-accuracy_custom': 0.11995967477560043, 'latency-avg': 5.16713}
+[2023-08-25 06:01:09,571] [INFO] [footprint.py:166:get_pareto_frontier] pareto frontier points: 34_OrtPerfTuning-33-905b1c6d27e3251edfcea7e072fd7bff-cpu-cpu {'accuracy-accuracy_custom': 0.12802419066429138, 'latency-avg': 5.22776}
+[2023-08-25 06:01:09,571] [INFO] [footprint.py:166:get_pareto_frontier] pareto frontier points: 52_OrtPerfTuning-51-905b1c6d27e3251edfcea7e072fd7bff-cpu-cpu {'accuracy-accuracy_custom': 0.13306452333927155, 'latency-avg': 5.36596}
+[2023-08-25 06:01:09,571] [INFO] [engine.py:609:get_pareto_frontier_footprints] Output all 3 models
+[2023-08-25 06:01:09,572] [INFO] [engine.py:392:run] No packaging config provided, skip packaging artifacts

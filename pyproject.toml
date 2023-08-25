@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "olive-exercises"
+name = "olive_exercises"
 version = "0.1.0"
 description = ""
 authors = ["Zheng Hao Tan <hi@zhenghaotan.com>"]

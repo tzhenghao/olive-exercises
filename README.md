@@ -13,7 +13,9 @@ pip install -r additional_requirements.txt
 ## Running a ResNet PTQ (CPU) Example
 
 Prepare the data and model by running the following script:
-`python prepare_model_data.py`
+``python
+python prepare_model_data.py
+```
 
 ```python
 python -m olive.workflows.run --config resnet_ptq_cpu.json --setup

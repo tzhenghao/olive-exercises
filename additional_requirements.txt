@@ -1,0 +1,7 @@
+azure-ai-ml
+azure-identity
+azureml-fsspec
+onnxruntime
+pytorch-lightning
+scipy
+torchvision
